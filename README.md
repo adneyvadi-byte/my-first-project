@@ -1,1 +1,1 @@
-# my_second_website
+# my-second-website
