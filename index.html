@@ -3,412 +3,500 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+
+<title>Vishal Vanave | Portfolio</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',Arial,sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000428);
-background-size:400% 400%;
-animation:bg 12s ease infinite;
-color:white;
+    background:#0b0f1a;
+    color:white;
 }
 
-@keyframes bg{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
+
+/* NAVBAR */
 
 nav{
-display:flex;
-justify-content:space-between;
-padding:20px 10%;
-position:sticky;
-top:0;
-background:rgba(0,0,0,.6);
-backdrop-filter:blur(10px);
+    position:fixed;
+    width:100%;
+    top:0;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(15px);
+    z-index:1000;
 }
 
-nav h2{
-color:#00e6ff;
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00ffff;
 }
 
-nav ul{
-display:flex;
-list-style:none;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-nav ul li{
-margin-left:20px;
+nav a:hover{
+    color:#00ffff;
 }
 
-nav ul li a{
-text-decoration:none;
-color:white;
-font-weight:bold;
-transition:.3s;
-}
 
-nav ul li a:hover{
-color:#00e6ff;
-}
+/* HERO */
 
 .hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+
+    background:
+    linear-gradient(45deg,#ff0080,#7928ca,#00ffff);
+    background-size:300% 300%;
+    animation:bg 8s infinite alternate;
 }
 
-.hero img{
-width:180px;
-height:180px;
-border-radius:50%;
-border:5px solid #00e6ff;
-margin-bottom:20px;
+
+@keyframes bg{
+    0%{
+        background-position:left;
+    }
+    100%{
+        background-position:right;
+    }
 }
 
-.hero h1{
-font-size:60px;
+
+.profile{
+    background:rgba(0,0,0,0.35);
+    padding:40px;
+    border-radius:30px;
+    backdrop-filter:blur(15px);
 }
 
-.hero h2{
-color:#00e6ff;
-margin:15px;
+
+.profile img{
+
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 0 30px cyan,
+    0 0 60px magenta;
+
+    animation:float 3s infinite;
 }
 
-.hero p{
-width:70%;
-font-size:18px;
-line-height:30px;
+
+@keyframes float{
+
+50%{
+    transform:translateY(-15px);
 }
+
+}
+
+
+h1{
+    margin-top:20px;
+    font-size:45px;
+}
+
+h1 span{
+    color:#00ffff;
+}
+
+
+.profile p{
+    font-size:20px;
+    margin:15px;
+}
+
 
 .btn{
+
 display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:#00e6ff;
-color:black;
+padding:12px 30px;
+margin-top:20px;
+
+background:white;
+color:#7928ca;
+
+border-radius:30px;
+
 text-decoration:none;
-border-radius:40px;
 font-weight:bold;
-transition:.4s;
+
+transition:.3s;
+
 }
+
 
 .btn:hover{
+
 transform:scale(1.1);
+background:#00ffff;
+
 }
+
+
+/* SECTION */
+
 
 section{
+
 padding:80px 10%;
+
 }
+
 
 .title{
+
 text-align:center;
-font-size:40px;
-margin-bottom:50px;
-color:#00e6ff;
+font-size:35px;
+color:#00ffff;
+margin-bottom:40px;
+
 }
 
+
+
+/* ABOUT */
+
+
 .about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
+
+text-align:center;
+font-size:20px;
+line-height:1.8;
+
 }
+
+
+
+/* SKILLS */
+
+
+.cards{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+
+}
+
 
 .card{
-background:rgba(255,255,255,.08);
+
+width:250px;
 padding:30px;
+
+text-align:center;
+
+background:
+linear-gradient(135deg,#111827,#1f2937);
+
 border-radius:20px;
+
+box-shadow:
+0 0 20px rgba(0,255,255,.3);
+
 transition:.4s;
-backdrop-filter:blur(8px);
+
 }
+
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 30px cyan;
+
+transform:translateY(-15px);
+
+background:
+linear-gradient(135deg,#7928ca,#ff0080);
+
 }
 
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-}
 
-.skill{
-background:rgba(255,255,255,.08);
-padding:25px;
-border-radius:15px;
-text-align:center;
-transition:.4s;
-}
 
-.skill:hover{
-background:#00e6ff;
-color:black;
-transform:scale(1.05);
-}
+/* PROJECTS */
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
 
 .project{
-background:rgba(255,255,255,.08);
+
+background:#111827;
 padding:25px;
 border-radius:20px;
-transition:.4s;
+margin:20px 0;
+
+border-left:5px solid cyan;
+
 }
 
-.project:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px cyan;
-}
+
+/* CONTACT */
+
 
 .contact{
+
 text-align:center;
+
 }
+
+
+.contact a{
+
+color:#00ffff;
+font-size:22px;
+text-decoration:none;
+
+}
+
+
+
+/* FOOTER */
 
 footer{
+
 text-align:center;
-padding:30px;
-background:#000;
-margin-top:50px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:40px;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-.hero p{
-width:90%;
-}
+padding:20px;
+background:black;
 
 }
+
 
 </style>
 
 </head>
+
+
 <body>
+
 
 <nav>
 
-<h2>Portfolio</h2>
+<div class="logo">
+Vishal
+</div>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+
+<div>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</div>
 
 </nav>
 
-<div class="hero">
 
-<img src="https://via.placeholder.com/180" alt="Profile">
 
-<h1>Your Name</h1>
+<!-- HOME -->
 
-<h2>Web Developer | AI & ML Student</h2>
+
+<div class="hero" id="home">
+
+
+<div class="profile">
+
+
+<img src="myphoto.jpg" alt="My Photo">
+
+
+<h1>
+Hi, I'm <span>Vishal Vanave</span>
+</h1>
+
 
 <p>
-Passionate developer who loves building beautiful websites,
-AI projects and solving real-world problems using technology.
+B.Tech AIML Student | Programmer | Future AI Engineer
 </p>
 
-<a href="#contact" class="btn">Hire Me</a>
+
+<a class="btn" href="#contact">
+Contact Me
+</a>
+
 
 </div>
+
+
+</div>
+
+
+
+
+<!-- ABOUT -->
+
 
 <section id="about">
 
-<h1 class="title">About Me</h1>
+<h2 class="title">
+About Me
+</h2>
+
 
 <div class="about">
 
-<div class="card">
-
-<h2>Hello!</h2>
-
-<br>
-
-<p>
-
-I am a passionate programmer and AI student.
-I enjoy creating modern websites, machine learning projects
-and innovative software solutions.
-
-</p>
+I am a passionate B.Tech Artificial Intelligence and Machine Learning student.
+I love programming, technology, problem solving and creating innovative projects
+using modern technologies.
 
 </div>
 
-<div class="card">
-
-<h2>Education</h2>
-
-<br>
-
-<p>
-
-B.Tech Artificial Intelligence & Machine Learning
-
-<br><br>
-
-Interested in Web Development,
-Python,
-Machine Learning,
-Data Science and Cyber Security.
-
-</p>
-
-</div>
-
-</div>
 
 </section>
+
+
+
+
+<!-- SKILLS -->
+
 
 <section id="skills">
 
-<h1 class="title">Skills</h1>
 
-<div class="skills">
+<h2 class="title">
+My Skills
+</h2>
 
-<div class="skill">HTML5</div>
-<div class="skill">CSS3</div>
-<div class="skill">JavaScript</div>
-<div class="skill">Python</div>
-<div class="skill">C Programming</div>
-<div class="skill">Machine Learning</div>
-<div class="skill">Git & GitHub</div>
-<div class="skill">SQL</div>
+
+<div class="cards">
+
+
+<div class="card">
+<h2>Python</h2>
+<p>Programming & AI Development</p>
+</div>
+
+
+<div class="card">
+<h2>Machine Learning</h2>
+<p>AI Models and Data Analysis</p>
+</div>
+
+
+<div class="card">
+<h2>Web Development</h2>
+<p>HTML CSS JavaScript</p>
+</div>
+
+
+<div class="card">
+<h2>Data Structures</h2>
+<p>Problem Solving</p>
+</div>
+
 
 </div>
+
 
 </section>
 
+
+
+
+<!-- PROJECTS -->
+
+
 <section id="projects">
 
-<h1 class="title">Projects</h1>
 
-<div class="projects">
+<h2 class="title">
+Projects
+</h2>
 
-<div class="project">
-
-<h2>Portfolio Website</h2>
-
-<br>
-
-<p>
-
-Responsive personal portfolio with animations.
-
-</p>
-
-</div>
 
 <div class="project">
 
 <h2>AI Chatbot</h2>
 
-<br>
-
 <p>
-
-Python chatbot using Natural Language Processing.
-
+Created an intelligent chatbot using Python and AI concepts.
 </p>
 
 </div>
+
+
 
 <div class="project">
 
-<h2>Weather App</h2>
-
-<br>
+<h2>Portfolio Website</h2>
 
 <p>
-
-Real-time weather application using API.
-
+Responsive personal portfolio with animations and modern UI.
 </p>
 
 </div>
 
-<div class="project">
 
-<h2>Student Management</h2>
-
-<br>
-
-<p>
-
-Database project for managing students.
-
-</p>
-
-</div>
-
-</div>
 
 </section>
+
+
+
+
+
+<!-- CONTACT -->
+
 
 <section id="contact">
 
-<h1 class="title">Contact</h1>
+
+<h2 class="title">
+Contact
+</h2>
+
 
 <div class="contact">
 
-<h2>Your Name</h2>
+<p>Email:</p>
 
-<br>
+<a href="#">
+yourmail@gmail.com
+</a>
 
-<p>Email : your@email.com</p>
 
-<br>
+<p style="margin-top:20px;">
+LinkedIn | GitHub
+</p>
 
-<p>Phone : +91 9876543210</p>
-
-<br>
-
-<p>GitHub : github.com/yourusername</p>
-
-<br>
-
-<p>LinkedIn : linkedin.com/in/yourname</p>
-
-<br>
-
-<a href="#" class="btn">Download Resume</a>
 
 </div>
 
+
 </section>
+
+
 
 <footer>
 
-© 2026 Your Name | Designed with ❤️
+© 2026 Vishal Vanave | All Rights Reserved
 
 </footer>
+
+
 
 </body>
 </html>
