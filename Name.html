@@ -1,1 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#000428);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+color:white;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+position:sticky;
+top:0;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+}
+
+nav h2{
+color:#00e6ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#00e6ff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #00e6ff;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero h2{
+color:#00e6ff;
+margin:15px;
+}
+
+.hero p{
+width:70%;
+font-size:18px;
+line-height:30px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:#00e6ff;
+color:black;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#00e6ff;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+transition:.4s;
+backdrop-filter:blur(8px);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px cyan;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.skill{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:.4s;
+}
+
+.skill:hover{
+background:#00e6ff;
+color:black;
+transform:scale(1.05);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+transition:.4s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px cyan;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero p{
+width:90%;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<h2>Portfolio</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<img src="https://via.placeholder.com/180" alt="Profile">
+
+<h1>Your Name</h1>
+
+<h2>Web Developer | AI & ML Student</h2>
+
+<p>
+Passionate developer who loves building beautiful websites,
+AI projects and solving real-world problems using technology.
+</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
+
+<section id="about">
+
+<h1 class="title">About Me</h1>
+
+<div class="about">
+
+<div class="card">
+
+<h2>Hello!</h2>
+
+<br>
+
+<p>
+
+I am a passionate programmer and AI student.
+I enjoy creating modern websites, machine learning projects
+and innovative software solutions.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Education</h2>
+
+<br>
+
+<p>
+
+B.Tech Artificial Intelligence & Machine Learning
+
+<br><br>
+
+Interested in Web Development,
+Python,
+Machine Learning,
+Data Science and Cyber Security.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h1 class="title">Skills</h1>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Python</div>
+<div class="skill">C Programming</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">SQL</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h1 class="title">Projects</h1>
+
+<div class="projects">
+
+<div class="project">
+
+<h2>Portfolio Website</h2>
+
+<br>
+
+<p>
+
+Responsive personal portfolio with animations.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h2>AI Chatbot</h2>
+
+<br>
+
+<p>
+
+Python chatbot using Natural Language Processing.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h2>Weather App</h2>
+
+<br>
+
+<p>
+
+Real-time weather application using API.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h2>Student Management</h2>
+
+<br>
+
+<p>
+
+Database project for managing students.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h1 class="title">Contact</h1>
+
+<div class="contact">
+
+<h2>Your Name</h2>
+
+<br>
+
+<p>Email : your@email.com</p>
+
+<br>
+
+<p>Phone : +91 9876543210</p>
+
+<br>
+
+<p>GitHub : github.com/yourusername</p>
+
+<br>
+
+<p>LinkedIn : linkedin.com/in/yourname</p>
+
+<br>
+
+<a href="#" class="btn">Download Resume</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Your Name | Designed with ❤️
+
+</footer>
+
+</body>
+</html>
